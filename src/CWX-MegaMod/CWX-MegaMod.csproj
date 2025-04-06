@@ -31,8 +31,26 @@
         <Reference Include="Newtonsoft.Json">
             <HintPath>..\..\shared\Newtonsoft.Json.dll</HintPath>
         </Reference>
+        <Reference Include="UniTask">
+          <HintPath>..\..\shared\UniTask.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.DOTween">
+          <HintPath>..\..\shared\UniTask.DOTween.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.Linq">
+          <HintPath>..\..\shared\UniTask.Linq.dll</HintPath>
+        </Reference>
+        <Reference Include="UniTask.TextMeshPro">
+          <HintPath>..\..\shared\UniTask.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Collections">
+          <HintPath>..\..\shared\Unity.Collections.dll</HintPath>
+        </Reference>
         <Reference Include="UnityEngine">
             <HintPath>..\..\shared\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AIModule">
+          <HintPath>..\..\shared\UnityEngine.AIModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
             <HintPath>..\..\shared\UnityEngine.CoreModule.dll</HintPath>
@@ -66,6 +84,12 @@
         </Reference>
         <Reference Include="Unity.Postprocessing.Runtime">
             <HintPath>..\..\shared\Unity.Postprocessing.Runtime.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityToolkit">
+          <HintPath>..\..\shared\UnityToolkit.dll</HintPath>
+        </Reference>
+        <Reference Include="ZString">
+          <HintPath>..\..\shared\ZString.dll</HintPath>
         </Reference>
     </ItemGroup>
 

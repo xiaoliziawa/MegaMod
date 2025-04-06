@@ -2,6 +2,7 @@
 using BepInEx.Configuration;
 using BepInEx.Logging;
 using CWX_MegaMod.BotMonitor.Models;
+using CWX_MegaMod.BotPerformance;
 using CWX_MegaMod.ChadMode;
 using CWX_MegaMod.Config;
 using CWX_MegaMod.InventoryViewer;
@@ -20,6 +21,10 @@ namespace CWX_MegaMod
 	[BepInPlugin("CWX.MegaMod", "CWX-MegaMod", "1.5.0")]
 	public class MegaMod : BaseUnityPlugin
 	{
+		// because i have the memory of a potato
+		public static bool RunOriginal = true;
+		public static bool DontRunOriginal = false;
+
 		internal new static ManualLogSource Logger { get; private set; }
 		internal static ConfigEntry<bool> BushWhacker { get; private set; }
 		internal static ConfigEntry<bool> GrassCutter { get; private set; }
@@ -65,6 +70,8 @@ namespace CWX_MegaMod
 			new LootLossPatch().Enable();
 			new HydrationPatch().Enable();
 			new EnergyPatch().Enable();
+			new ManualUpdatePatch().Enable(); // work being done is too small for the cost of threading
+			// new BotsControllerPatch().Enable();
 		}
 
 		// Higher order number comes first
