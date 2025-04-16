@@ -18,8 +18,8 @@ namespace CWX_MegaMod.LootLoss
         {
             if (MegaMod.LootLoss.Value)
             {
-                raidSettings.selectedLocation.containers = new Dictionary<string, LocationSettingsClass.Location.GClass1350>();
-                raidSettings.selectedLocation.Loot = new GClass1333();
+                raidSettings.selectedLocation.containers = new Dictionary<string, LocationSettingsClass.Location.GClass1380>();
+                raidSettings.selectedLocation.Loot = new GClass1363();
             }
         }
     }
