@@ -5,7 +5,7 @@ using CWX_MegaMod.BotMonitor.Models;
 using CWX_MegaMod.ChadMode;
 using CWX_MegaMod.Config;
 using CWX_MegaMod.InventoryViewer;
-using CWX_MegaMod.LootLoss;
+// using CWX_MegaMod.LootLoss;
 using CWX_MegaMod.PainkillerDesat;
 using CWX_MegaMod.SpaceUser;
 using CWX_MegaMod.TradingPlayerView;
@@ -42,7 +42,7 @@ namespace CWX_MegaMod
 		internal static ConfigEntry<bool> NightVisionMode { get; private set; }
 		internal static ConfigEntry<bool> CameraShake { get; private set; }
 		// internal static ConfigEntry<bool> WindowWiper { get; private set; }
-		internal static ConfigEntry<bool> LootLoss { get; private set; }
+		// internal static ConfigEntry<bool> LootLoss { get; private set; }
 		internal static ConfigEntry<bool> FoodWater { get; private set; }
 		internal static ConfigEntry<bool> InstantSearch { get; private set; }
 
@@ -56,15 +56,16 @@ namespace CWX_MegaMod
 			new SpaceUserFleaPatch().Enable();
 			new TradingPlayerItemViewPatch().Enable();
 			new InventoryViewerPatch().Enable();
-			new PainkillerDesatScript1().Enable();
-			new PainkillerDesatScript2().Enable();
-			new PainkillerDesatScript3().Enable();
-			new PainkillerDesatScript4().Enable();
+			// new PainkillerDesatScript1().Enable();
+			// new PainkillerDesatScript2().Enable();
+			// new PainkillerDesatScript3().Enable();
+			// new PainkillerDesatScript4().Enable();
 			// new WeatherPatcherScopePatch().Enable();
 			new CameraShakePatch().Enable();
-			new LootLossPatch().Enable();
+			// new LootLossPatch().Enable();
 			new HydrationPatch().Enable();
 			new EnergyPatch().Enable();
+			// new ColorBackground().Enable();
 		}
 
 		// Higher order number comes first
@@ -89,7 +90,7 @@ namespace CWX_MegaMod
 			// Debugging Mods
 			InstantSearch = Config.Bind("2- Debug Mods", "InstantSearch - On/Off", false, new ConfigDescription("Enable InstantSearch - Enables InstantSearch", tags: new ConfigurationManagerAttributes() { Order = 10 }));
 			FoodWater = Config.Bind("2- Debug Mods", "FoodWater - On/Off", false, new ConfigDescription("Enable FoodWater - removes hydration and energy drain", tags: new ConfigurationManagerAttributes() { Order = 9 }));
-			LootLoss = Config.Bind("2- Debug Mods", "LootLoss - On/Off", false, new ConfigDescription("Enable LootLoss - removes loot on map load", tags: new ConfigurationManagerAttributes() { Order = 8 }));
+			// LootLoss = Config.Bind("2- Debug Mods", "LootLoss - On/Off", false, new ConfigDescription("Enable LootLoss - removes loot on map load", tags: new ConfigurationManagerAttributes() { Order = 8 }));
 			BotMonitor = Config.Bind("2- Debug Mods", "BotMonitor - On/Off", false, new ConfigDescription("Enable BotMonitor - Adds a custom gui for Bot Monitoring", tags: new ConfigurationManagerAttributes() { Order = 7 }));
 			InventoryViewer = Config.Bind("2- Debug Mods", "InventoryViewer - On/Off", false, new ConfigDescription("Enable InventoryViewer - Changes inventory view to show all containers or not", tags: new ConfigurationManagerAttributes() { Order = 6 }));
 			GodMode = Config.Bind("2- Debug Mods", "GodMode - On/Off", false, new ConfigDescription("Enable GodMode - Unable to be killed", tags: new ConfigurationManagerAttributes() { Order = 5 }));

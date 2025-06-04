@@ -113,7 +113,32 @@ namespace CWX_MegaMod
 
         private void SetBotMonitor()
         {
+            if (_botMonitorScript == null)
+            {
+                ConsoleScreen.LogError("[CWX-MegaMod] BotMonitorScript is null.");
+                return;
+            }
             _botMonitorScript.enabled = !_botMonitorScript.enabled;
+        }
+
+        public void OnDestroy()
+        {
+            MegaMod.BushWhacker.SettingChanged -= (a, b) => _bushWhackerScript.StartTask();
+            MegaMod.GrassCutter.SettingChanged -= (a, b) => _grassCutterScript.StartTask();
+            MegaMod.MasterKey.SettingChanged -= (a, b) => _masterKeyScript.StartTask();
+            MegaMod.MasterKeyToUse.SettingChanged -= (a, b) => _masterKeyScript.StartTask();
+            MegaMod.EnvironmentEnjoyer.SettingChanged -= (a, b) => _environmentEnjoyerScript.StartTask();
+            MegaMod.FogRemover.SettingChanged -= (a, b) => _weatherPatcherScript.StartTask();
+            MegaMod.WeatherDebug.SettingChanged -= (a, b) => _weatherPatcherScript.StartTask();
+            MegaMod.BotMonitor.SettingChanged -= (a, b) => SetBotMonitor();
+            // reset the text style so fontsize changes happen
+            MegaMod.BotMonitorFontSize.SettingChanged -= (a, b) => _botMonitorScript.TextStyle = null;
+            MegaMod.GodMode.SettingChanged -= (a, b) => _godModeScript.StartTask();
+            MegaMod.ThermalMode.SettingChanged -= (a, b) => _cameraScripts.StartTask();
+            MegaMod.NightVisionMode.SettingChanged -= (a, b) => _cameraScripts.StartTask();
+            MegaMod.BetterThermalMode.SettingChanged -= (a, b) => _cameraScripts.StartTask();
+            // MegaMod.WindowWiper.SettingChanged -= (a, b) => _tempFuckaroundScript.StartTask();
+            MegaMod.InstantSearch.SettingChanged -= (a, b) => _instantSearchScript.StartTask();
         }
     }
 }

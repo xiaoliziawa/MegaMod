@@ -10,6 +10,9 @@
         <Reference Include="0Harmony">
             <HintPath>..\..\shared\0Harmony.dll</HintPath>
         </Reference>
+        <Reference Include="ItemTemplate.Types">
+          <HintPath>..\..\..\..\SPT\4.0.0.dev\EscapeFromTarkov_Data\Managed\ItemTemplate.Types.dll</HintPath>
+        </Reference>
         <Reference Include="spt-Common">
             <HintPath>..\..\shared\spt-Common.dll</HintPath>
         </Reference>
