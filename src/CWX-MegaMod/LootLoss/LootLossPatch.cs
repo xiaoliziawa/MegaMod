@@ -16,11 +16,13 @@ namespace CWX_MegaMod.LootLoss
         [PatchPrefix]
         public static void PatchPrefix(ref LocalRaidSettings raidSettings)
         {
-            if (MegaMod.LootLoss.Value)
+            if (!MegaMod.LootLoss.Value)
             {
-                raidSettings.selectedLocation.containers = new Dictionary<string, LocationSettingsClass.Location.GClass1350>();
-                raidSettings.selectedLocation.Loot = new GClass1333();
+                return;
             }
+            
+            raidSettings.selectedLocation.containers = new Dictionary<string, LocationSettingsClass.Location.GClass1421>();
+            raidSettings.selectedLocation.Loot = new GClass1404();
         }
     }
 }

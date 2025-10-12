@@ -24,7 +24,7 @@ namespace CWX_MegaMod.TradingPlayerView
                 var itemView = (ItemView)__instance;
 
                 var context = (ItemUiContext)AccessTools.Field(itemView.GetType(), "ItemUiContext").GetValue(itemView);
-                context.Tooltip.Show(text, null, 0f, null); // context.Tooltip.Show(text, null, 0f, null, true);
+                context.Tooltip.Show(text, null, 0f, null);
 
                 return false;
             }

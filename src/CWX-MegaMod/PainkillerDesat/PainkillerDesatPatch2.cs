@@ -10,46 +10,28 @@ namespace CWX_MegaMod.PainkillerDesat
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(GetTargetType(), "method_1");
-        }
-
-        private Type GetTargetType()
-        {
-            var effectsController = AccessTools.TypeByName(nameof(EffectsController));
-
-            // get nested types
-            var nestedTypes = effectsController.GetNestedTypes();
-
-            // get type that contains a field named "cc_sharpen_0" and a "method_2" - there should only be one
-            var result = nestedTypes.FirstOrDefault(x =>
-                x.GetFields(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic)
-                    .Any(f => f.Name.ToLower() == "cc_sharpen_0") &&
-                x.GetMethods(BindingFlags.Public | BindingFlags.Instance | BindingFlags.NonPublic)
-                    .Any(m => m.Name.ToLower() == "method_2"));
-
-            // return resulting type
-            return result;
+            return AccessTools.Method(typeof(EffectsController.Class640), nameof(EffectsController.Class640.method_1));
         }
 
         [PatchPrefix] // removes the sharpen/desat effect from some painkillers
-        public static bool PatchPrefix(ref CC_Sharpen ___cc_Sharpen_0)
+        public static bool PatchPrefix(ref CC_Sharpen ___Cc_Sharpen_0)
         {
             if (!MegaMod.PainkillerDesat.Value)
             {
                 return true;
             }
 
-            if (___cc_Sharpen_0 != null)
+            if (___Cc_Sharpen_0 != null)
             {
-                ___cc_Sharpen_0.MaskDesaturate = 0f;
-                ___cc_Sharpen_0.Radius = 1f;
-                ___cc_Sharpen_0.RadiusFalloff = 0.425f;
+                ___Cc_Sharpen_0.MaskDesaturate = 0f;
+                ___Cc_Sharpen_0.Radius = 1f;
+                ___Cc_Sharpen_0.RadiusFalloff = 0.425f;
 
-                if (___cc_Sharpen_0.DesaturateEffectSettingsProvider != null)
+                if (___Cc_Sharpen_0.DesaturateEffectSettingsProvider != null)
                 {
-                    ___cc_Sharpen_0.DesaturateEffectSettingsProvider.MaskDesaturate = 0f;
-                    ___cc_Sharpen_0.DesaturateEffectSettingsProvider.Radius = 1f;
-                    ___cc_Sharpen_0.DesaturateEffectSettingsProvider.RadiusFalloff = 0.425f;
+                    ___Cc_Sharpen_0.DesaturateEffectSettingsProvider.MaskDesaturate = 0f;
+                    ___Cc_Sharpen_0.DesaturateEffectSettingsProvider.Radius = 1f;
+                    ___Cc_Sharpen_0.DesaturateEffectSettingsProvider.RadiusFalloff = 0.425f;
                 }
             }
 

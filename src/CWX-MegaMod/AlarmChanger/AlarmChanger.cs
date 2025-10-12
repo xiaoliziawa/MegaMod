@@ -27,6 +27,7 @@ namespace CWX_MegaMod.AlarmChanger
 
             if (!Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + "/BepInEx/plugins/CWX/Sounds/"))
             {
+                MegaMod.Logger.LogWarning("Directory not found for sounds, destroying script.");
                 Destroy(this);
             }
             
