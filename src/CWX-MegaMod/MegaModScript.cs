@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Comfort.Common;
 using CWX_MegaMod.AlarmChanger;
 using CWX_MegaMod.BushWhacker;
@@ -95,6 +96,21 @@ namespace CWX_MegaMod
             MegaMod.BetterThermalMode.SettingChanged += (a, b) => _cameraScripts.StartTask();
             MegaMod.InstantSearch.SettingChanged += (a, b) => _instantSearchScript.StartTask();
             // MegaMod.NewContent.SettingChanged += (a, b) => NewContentScript.StartTask();
+        }
+
+        private void OnDestroy()
+        {
+            MegaMod.BushWhacker.SettingChanged -= (a, b) => _bushWhackerScript.StartTask();
+            MegaMod.GrassCutter.SettingChanged -= (a, b) => _grassCutterScript.StartTask();
+            MegaMod.MasterKey.SettingChanged -= (a, b) => _masterKeyScript.StartTask();
+            MegaMod.MasterKeyToUse.SettingChanged -= (a, b) => _masterKeyScript.StartTask();
+            MegaMod.EnvironmentEnjoyer.SettingChanged -= (a, b) => _environmentEnjoyerScript.StartTask();
+            MegaMod.GodMode.SettingChanged -= (a, b) => _godModeScript.StartTask();
+            MegaMod.ThermalMode.SettingChanged -= (a, b) => _cameraScripts.StartTask();
+            MegaMod.NightVisionMode.SettingChanged -= (a, b) => _cameraScripts.StartTask();
+            MegaMod.BetterThermalMode.SettingChanged -= (a, b) => _cameraScripts.StartTask();
+            MegaMod.InstantSearch.SettingChanged -= (a, b) => _instantSearchScript.StartTask();
+            // MegaMod.NewContent.SettingChanged -= (a, b) => NewContentScript.StartTask();
         }
     }
 }

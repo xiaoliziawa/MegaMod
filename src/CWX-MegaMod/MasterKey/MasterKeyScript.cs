@@ -11,14 +11,14 @@ namespace CWX_MegaMod.MasterKey
     public class MasterKeyScript : MonoBehaviour
     {
         private List<Door> Doors;
-        private Dictionary<string, string> DoorDefaults = new Dictionary<string, string>();
+        private Dictionary<string, string> DoorDefaults = new();
         private List<KeycardDoor> KeycardDoors;
-        private Dictionary<string, string> KeycardDoorDefaults = new Dictionary<string, string>();
+        private Dictionary<string, string> KeycardDoorDefaults = new();
         private List<LootableContainer> LootableContainers;
-        private Dictionary<string, string> LootableContainerDefaults = new Dictionary<string, string>();
+        private Dictionary<string, string> LootableContainerDefaults = new();
         private List<Trunk> Trunks;
-        private Dictionary<string, string> TrunkDefaults = new Dictionary<string, string>();
-        private bool ReadyToEdit = false;
+        private Dictionary<string, string> TrunkDefaults = new();
+        private bool ReadyToEdit;
 
         private void Awake()
         {
@@ -87,7 +87,7 @@ namespace CWX_MegaMod.MasterKey
             {
                 if (door.KeyId != string.Empty)
                 {
-                    if (MegaMod.MasterKey.Value == true)
+                    if (MegaMod.MasterKey.Value)
                     {
                         door.KeyId = MasterKeyHelper.GetMasterKey(MegaMod.MasterKeyToUse.Value);
                     }
@@ -102,7 +102,7 @@ namespace CWX_MegaMod.MasterKey
             {
                 if (keycardDoor.KeyId != string.Empty)
                 {
-                    if (MegaMod.MasterKey.Value == true)
+                    if (MegaMod.MasterKey.Value)
                     {
                         keycardDoor.KeyId = MasterKeyHelper.GetMasterKey(MegaMod.MasterKeyToUse.Value);
                     }
@@ -117,7 +117,7 @@ namespace CWX_MegaMod.MasterKey
             {
                 if (lootableContainer.KeyId != string.Empty)
                 {
-                    if (MegaMod.MasterKey.Value == true)
+                    if (MegaMod.MasterKey.Value)
                     {
                         lootableContainer.KeyId = MasterKeyHelper.GetMasterKey(MegaMod.MasterKeyToUse.Value);
                     }
@@ -132,7 +132,7 @@ namespace CWX_MegaMod.MasterKey
             {
                 if (trunk.KeyId != string.Empty)
                 {
-                    if (MegaMod.MasterKey.Value == true)
+                    if (MegaMod.MasterKey.Value)
                     {
                         trunk.KeyId = MasterKeyHelper.GetMasterKey(MegaMod.MasterKeyToUse.Value);
                     }

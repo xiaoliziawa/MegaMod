@@ -18,24 +18,24 @@ namespace CWX_MegaMod
     public class MegaMod : BaseUnityPlugin
     {
         internal new static ManualLogSource Logger { get; private set; }
-        internal static ConfigEntry<bool> BushWhacker { get; private set; } // works
-        internal static ConfigEntry<bool> GrassCutter { get; private set; } // works
-        internal static ConfigEntry<bool> MasterKey { get; private set; } // works
-        internal static ConfigEntry<EMasterKeys> MasterKeyToUse { get; private set; } // works
-        internal static ConfigEntry<bool> TradingPlayerView { get; private set; } // works
-        internal static ConfigEntry<bool> SpaceUser { get; private set; } // works
-        internal static ConfigEntry<bool> EnvironmentEnjoyer { get; private set; } // works
-        internal static ConfigEntry<bool> InventoryViewer { get; private set; } // works
-        internal static ConfigEntry<bool> PainkillerDesat { get; private set; } // does not work
-        internal static ConfigEntry<bool> ReserveAlarmChanger { get; private set; } // works
-        internal static ConfigEntry<bool> GodMode { get; private set; } // works
-        internal static ConfigEntry<bool> ThermalMode { get; private set; } // works
-        internal static ConfigEntry<bool> BetterThermalMode { get; private set; } // works
-        internal static ConfigEntry<bool> NightVisionMode { get; private set; } // works
+        internal static ConfigEntry<bool> BushWhacker { get; private set; }
+        internal static ConfigEntry<bool> GrassCutter { get; private set; }
+        internal static ConfigEntry<bool> MasterKey { get; private set; }
+        internal static ConfigEntry<EMasterKeys> MasterKeyToUse { get; private set; }
+        internal static ConfigEntry<bool> TradingPlayerView { get; private set; }
+        internal static ConfigEntry<bool> SpaceUser { get; private set; }
+        internal static ConfigEntry<bool> EnvironmentEnjoyer { get; private set; }
+        internal static ConfigEntry<bool> InventoryViewer { get; private set; }
+        internal static ConfigEntry<bool> PainkillerDesat { get; private set; }
+        internal static ConfigEntry<bool> ReserveAlarmChanger { get; private set; }
+        internal static ConfigEntry<bool> GodMode { get; private set; }
+        internal static ConfigEntry<bool> ThermalMode { get; private set; }
+        internal static ConfigEntry<bool> BetterThermalMode { get; private set; }
+        internal static ConfigEntry<bool> NightVisionMode { get; private set; }
         internal static ConfigEntry<bool> CameraShake { get; private set; }
-        internal static ConfigEntry<bool> LootLoss { get; private set; } // does not work
-        internal static ConfigEntry<bool> FoodWater { get; private set; } // works
-        internal static ConfigEntry<bool> InstantSearch { get; private set; } // works
+        internal static ConfigEntry<bool> LootLoss { get; private set; }
+        internal static ConfigEntry<bool> FoodWater { get; private set; }
+        internal static ConfigEntry<bool> InstantSearch { get; private set; }
         // internal static ConfigEntry<bool> NewContent { get; private set; }
 
         public void Awake()

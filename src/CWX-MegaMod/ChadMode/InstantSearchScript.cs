@@ -23,7 +23,7 @@ namespace CWX_MegaMod.ChadMode
             _oldEliteSearch = _skillManager.AttentionEliteLuckySearch.Value;
         }
 
-        public async Task StartTask()
+        public void StartTask()
         {
             if (MegaMod.InstantSearch.Value)
             {
