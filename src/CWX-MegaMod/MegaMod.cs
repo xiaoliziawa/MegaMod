@@ -14,7 +14,7 @@ using UnityEngine;
 
 namespace CWX_MegaMod
 {
-    [BepInPlugin("com.cwx.megamod", "CWX-MegaMod", "4.0.0")]
+    [BepInPlugin("com.cwx.megamod", "CWX-MegaMod", "4.0.1")]
     public class MegaMod : BaseUnityPlugin
     {
         internal new static ManualLogSource Logger { get; private set; }
