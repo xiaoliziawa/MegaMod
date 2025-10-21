@@ -15,10 +15,10 @@
             <HintPath>..\..\shared\FidelityFX.FSR.dll</HintPath>
         </Reference>
         <Reference Include="spt-Common">
-            <HintPath>..\..\shared\spt-Common.dll</HintPath>
+            <HintPath>..\..\shared\spt-common.dll</HintPath>
         </Reference>
         <Reference Include="spt-Reflection">
-            <HintPath>..\..\shared\spt-Reflection.dll</HintPath>
+            <HintPath>..\..\shared\spt-reflection.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
             <HintPath>..\..\shared\Assembly-CSharp.dll</HintPath>
