@@ -11,8 +11,9 @@ namespace CWX_MegaMod.ChadMode
         private GameWorld _gameWorld;
         private Player _player;
         private SkillManager _skillManager;
-        private bool _oldEliteContainer = false;
-        private float _oldEliteSearch = 0f;
+        private bool _oldEliteContainer;
+        private float _oldEliteSearch;
+        private float _oldAttentionExp;
 
         private void Awake()
         {
@@ -21,6 +22,7 @@ namespace CWX_MegaMod.ChadMode
             _skillManager = _player.Skills;
             _oldEliteContainer = _skillManager.IntellectEliteContainerScope.Value;
             _oldEliteSearch = _skillManager.AttentionEliteLuckySearch.Value;
+            _oldAttentionExp = _skillManager.Attention.Current;
         }
 
         public void StartTask()
@@ -29,11 +31,13 @@ namespace CWX_MegaMod.ChadMode
             {
                 _skillManager.IntellectEliteContainerScope.Value = true;
                 _skillManager.AttentionEliteLuckySearch.Value = 100f;
+                _skillManager.Attention.Current = 5100f;
             }
             else
             {
                 _skillManager.IntellectEliteContainerScope.Value = _oldEliteContainer;
                 _skillManager.AttentionEliteLuckySearch.Value = _oldEliteSearch;
+                _skillManager.Attention.Current = _oldAttentionExp;
             }
         }
     }
