@@ -1,5 +1,3 @@
-﻿using System;
-using System.Threading.Tasks;
 using Comfort.Common;
 using EFT;
 using UnityEngine;
@@ -20,7 +18,7 @@ namespace CWX_MegaMod.ChadMode
             _gameWorld = Singleton<GameWorld>.Instance;
             _player = _gameWorld.MainPlayer;
             _oldHealthCoef = _player.ActiveHealthController.DamageCoeff;
-            _oldSafeFallHeight = Singleton<BackendConfigSettingsClass>.Instance.Health.Falling.SafeHeight;
+            _oldSafeFallHeight = Singleton<GlobalConfiguration>.Instance.Health.Falling.SafeHeight;
         }
 
         public void StartTask()

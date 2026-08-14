@@ -1,6 +1,7 @@
 using System.Reflection;
 using SPT.Reflection.Patching;
 using Comfort.Common;
+using EFT;
 using EFT.UI;
 using EFT.UI.DragAndDrop;
 using HarmonyLib;
@@ -19,7 +20,7 @@ namespace CWX_MegaMod.TradingPlayerView
         {
             if (MegaMod.TradingPlayerView.Value == true)
             {
-                string text = Singleton<ItemFactoryClass>.Instance.BriefItemName(__instance.Item, __instance.Item.Name.Localized(null));
+                string text = Singleton<ItemFactory>.Instance.BriefItemName(__instance.Item, __instance.Item.Name.Localized(null));
 
                 var itemView = (ItemView)__instance;
 

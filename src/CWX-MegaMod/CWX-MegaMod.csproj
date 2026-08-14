@@ -9,70 +9,67 @@
 
     <ItemGroup>
         <Reference Include="0Harmony">
-            <HintPath>..\..\shared\0Harmony.dll</HintPath>
-        </Reference>
-        <Reference Include="FidelityFX.FSR">
-            <HintPath>..\..\shared\FidelityFX.FSR.dll</HintPath>
+            <HintPath>$(SptBepInExCorePath)\0Harmony.dll</HintPath>
         </Reference>
         <Reference Include="spt-Common">
-            <HintPath>..\..\shared\spt-common.dll</HintPath>
+            <HintPath>$(SptPluginsPath)\spt-common.dll</HintPath>
         </Reference>
         <Reference Include="spt-Reflection">
-            <HintPath>..\..\shared\spt-reflection.dll</HintPath>
+            <HintPath>$(SptPluginsPath)\spt-reflection.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp">
-            <HintPath>..\..\shared\Assembly-CSharp.dll</HintPath>
+            <HintPath>$(SptManagedPath)\Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="Assembly-CSharp-firstpass">
-            <HintPath>..\..\shared\Assembly-CSharp-firstpass.dll</HintPath>
+            <HintPath>$(SptManagedPath)\Assembly-CSharp-firstpass.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx">
-            <HintPath>..\..\shared\BepInEx.dll</HintPath>
+            <HintPath>$(SptBepInExCorePath)\BepInEx.dll</HintPath>
         </Reference>
         <Reference Include="Comfort">
-            <HintPath>..\..\shared\Comfort.dll</HintPath>
+            <HintPath>$(SptManagedPath)\Comfort.dll</HintPath>
         </Reference>
         <Reference Include="Newtonsoft.Json">
-            <HintPath>..\..\shared\Newtonsoft.Json.dll</HintPath>
+            <HintPath>$(SptManagedPath)\Newtonsoft.Json.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine">
-            <HintPath>..\..\shared\UnityEngine.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AssetBundleModule">
-            <HintPath>..\..\shared\UnityEngine.AssetBundleModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.AssetBundleModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.CoreModule">
-            <HintPath>..\..\shared\UnityEngine.CoreModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.CoreModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.PhysicsModule">
-            <HintPath>..\..\shared\UnityEngine.PhysicsModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.PhysicsModule.dll</HintPath>
         </Reference>
         <Reference Include="Sirenix.Serialization">
-            <HintPath>..\..\shared\Sirenix.Serialization.dll</HintPath>
+            <HintPath>$(SptManagedPath)\Sirenix.Serialization.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.InputLegacyModule">
-            <HintPath>..\..\shared\UnityEngine.InputLegacyModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.InputLegacyModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UI">
-            <HintPath>..\..\shared\UnityEngine.UI.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.UI.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.IMGUIModule">
-            <HintPath>..\..\shared\UnityEngine.IMGUIModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.IMGUIModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.TextRenderingModule">
-            <HintPath>..\..\shared\UnityEngine.TextRenderingModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.TextRenderingModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.AudioModule">
-            <HintPath>..\..\shared\UnityEngine.AudioModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.AudioModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UnityWebRequestAudioModule">
-            <HintPath>..\..\shared\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
         </Reference>
         <Reference Include="UnityEngine.UnityWebRequestModule">
-            <HintPath>..\..\shared\UnityEngine.UnityWebRequestModule.dll</HintPath>
+            <HintPath>$(SptManagedPath)\UnityEngine.UnityWebRequestModule.dll</HintPath>
         </Reference>
         <Reference Include="Unity.Postprocessing.Runtime">
-            <HintPath>..\..\shared\Unity.Postprocessing.Runtime.dll</HintPath>
+            <HintPath>$(SptManagedPath)\Unity.Postprocessing.Runtime.dll</HintPath>
         </Reference>
     </ItemGroup>
 

@@ -8,7 +8,7 @@ namespace CWX_MegaMod.ChadMode
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(EffectsController), nameof(EffectsController.method_7));
+            return AccessTools.Method(typeof(EffectsController), nameof(EffectsController.OnPlayerDamaged));
         }
 
         [PatchPrefix]

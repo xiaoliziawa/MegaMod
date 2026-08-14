@@ -1,8 +1,6 @@
-using System;
-using System.Linq;
 using System.Reflection;
-using SPT.Reflection.Patching;
 using HarmonyLib;
+using SPT.Reflection.Patching;
 
 namespace CWX_MegaMod.PainkillerDesat
 {
@@ -10,20 +8,21 @@ namespace CWX_MegaMod.PainkillerDesat
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(EffectsController.Class635), nameof(EffectsController.Class635.Toggle));
+            return AccessTools.Method(typeof(EffectsController.CC_DoubleVisionAccumulator),
+                nameof(EffectsController.CC_DoubleVisionAccumulator.Toggle));
         }
 
         [PatchPrefix] // removes the double vision effect from some painkillers
-        public static bool PatchPrefix(ref CC_DoubleVision ___Cc_DoubleVision_0)
+        public static bool PatchPrefix(ref CC_DoubleVision ___cc_DoubleVision_0)
         {
             if (!MegaMod.PainkillerDesat.Value)
             {
                 return true;
             }
 
-            if (___Cc_DoubleVision_0 != null)
+            if (___cc_DoubleVision_0 != null)
             {
-                ___Cc_DoubleVision_0.enabled = false;
+                ___cc_DoubleVision_0.enabled = false;
             }
 
             return false; // dont do method

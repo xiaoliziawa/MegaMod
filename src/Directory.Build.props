@@ -1,0 +1,9 @@
+<Project>
+    <PropertyGroup>
+        <SptGamePath Condition="'$(SptGamePath)' == ''">E:\ETF\Escape From Tarkov SPT 4.1.2</SptGamePath>
+        <SptManagedPath>$(SptGamePath)\EscapeFromTarkov_Data\Managed</SptManagedPath>
+        <SptBepInExCorePath>$(SptGamePath)\BepInEx\core</SptBepInExCorePath>
+        <SptBepInExPluginsPath>$(SptGamePath)\BepInEx\plugins</SptBepInExPluginsPath>
+        <SptPluginsPath>$(SptBepInExPluginsPath)\spt</SptPluginsPath>
+    </PropertyGroup>
+</Project>

@@ -2,6 +2,7 @@
 using System.Reflection;
 using EFT;
 using HarmonyLib;
+using JsonType;
 using SPT.Reflection.Patching;
 
 namespace CWX_MegaMod.LootLoss
@@ -10,7 +11,7 @@ namespace CWX_MegaMod.LootLoss
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(LocalGame), nameof(LocalGame.smethod_6));
+            return AccessTools.Method(typeof(LocalGame), nameof(LocalGame.Create));
         }
 
         [PatchPrefix]
@@ -21,8 +22,9 @@ namespace CWX_MegaMod.LootLoss
                 return;
             }
             
-            raidSettings.selectedLocation.containers = new Dictionary<string, LocationSettingsClass.Location.GClass1421>();
-            raidSettings.selectedLocation.Loot = new GClass1404();
+            var location = raidSettings.selectedLocation;
+            location.containers = new Dictionary<string, LocationSettings.Location.LootContainer>();
+            location.Loot = new LootData();
         }
     }
 }

@@ -1,8 +1,6 @@
-using System;
-using System.Linq;
 using System.Reflection;
-using SPT.Reflection.Patching;
 using HarmonyLib;
+using SPT.Reflection.Patching;
 
 namespace CWX_MegaMod.PainkillerDesat
 {
@@ -10,20 +8,21 @@ namespace CWX_MegaMod.PainkillerDesat
     {
         protected override MethodBase GetTargetMethod()
         {
-            return AccessTools.Method(typeof(EffectsController.Class645), nameof(EffectsController.Class645.Toggle));
+            return AccessTools.Method(typeof(EffectsController.CC_WiggleAccumulator),
+                nameof(EffectsController.CC_WiggleAccumulator.Toggle));
         }
 
         [PatchPrefix] // removes the wiggle effect from some painkillers
-        public static bool PatchPrefix(ref CC_Wiggle ___Cc_Wiggle_0)
+        public static bool PatchPrefix(ref CC_Wiggle ___cc_Wiggle_0)
         {
             if (!MegaMod.PainkillerDesat.Value)
             {
                 return true;
             }
 
-            if (___Cc_Wiggle_0 != null)
+            if (___cc_Wiggle_0 != null)
             {
-                ___Cc_Wiggle_0.enabled = false;
+                ___cc_Wiggle_0.enabled = false;
             }
 
             return false; // dont do method

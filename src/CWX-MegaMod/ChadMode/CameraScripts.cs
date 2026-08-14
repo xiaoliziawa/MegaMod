@@ -1,14 +1,12 @@
-﻿using System;
 using BSG.CameraEffects;
-using Comfort.Common;
-using EFT;
+using EFT.CameraControl;
 using UnityEngine;
 
 namespace CWX_MegaMod.ChadMode
 {
     public class CameraScripts : MonoBehaviour
     {
-        private CameraClass _camera;
+        private CameraManager _camera;
         private ThermalVision _thermalVision;
         private NightVision _nightVision;
         private bool _oldGlitch;
@@ -19,7 +17,7 @@ namespace CWX_MegaMod.ChadMode
         
         private void Awake()
         {
-            _camera = CameraClass.Instance;
+            _camera = CameraManager.Instance;
             
             _thermalVision = _camera.ThermalVision;
             _oldGlitch = _thermalVision.IsGlitch;
